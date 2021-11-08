@@ -1,4 +1,4 @@
-import { createSignal } from 'solid-js';
+import { Component, createSignal } from 'solid-js';
 
 // Component State
 export function createCounter() {
@@ -10,7 +10,7 @@ export function createCounter() {
 export type CounterProps = ReturnType<typeof createCounter>;
 
 // Component
-export const Counter = (props: CounterProps) => {
+export const Counter: Component<CounterProps> = (props) => {
   return (
     <div>
       <p>You clicked {props.count()} times</p>
